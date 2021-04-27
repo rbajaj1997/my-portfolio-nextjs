@@ -1,0 +1,85 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./typography.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15rem;
+  margin-bottom: 6rem;
+
+  @include respond(medium-desktop) {
+    margin: 0;
+    margin-bottom: 6rem;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  form {
+    width: 80%;
+  }
+
+  .group {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 1.8rem;
+    margin-bottom: 0.6rem;
+    color: $grey;
+  }
+
+  textarea {
+    resize: vertical;
+    padding: 0.8rem 0.2rem;
+    border-radius: 5px;
+    border: 1px solid $grey;
+  }
+
+  input {
+    flex: 1;
+    padding: 1rem 0.2rem;
+    border-radius: 5px;
+    border: 1px solid $grey;
+    background-color: $white;
+
+    &:focus {
+      box-shadow: 0;
+    }
+  }
+}
+
+.submitBtn {
+  margin-top: 3rem;
+  padding: 1.5rem 3rem;
+  align-self: center;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.8rem;
+  background-color: $purple;
+  color: white;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: lighten($purple, 5%);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba($black, 0.3);
+  }
+}
+
+.tired {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 9rem;
+}

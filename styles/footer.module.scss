@@ -1,0 +1,17 @@
+@import "./variables.scss";
+@import "./typography.scss";
+
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+
+  a {
+    font-size: 1.8rem;
+    &:not(:last-child) {
+      margin-right: 2.5rem;
+    }
+  }
+}
