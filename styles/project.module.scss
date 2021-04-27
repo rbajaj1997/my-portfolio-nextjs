@@ -1,0 +1,95 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./typography.scss";
+
+.project {
+  display: flex;
+  box-shadow: 0 5px 20px rgba($black, 0.2);
+  border-radius: 0.3rem;
+  padding: 2rem 0;
+  background: linear-gradient(
+    105deg,
+    rgba($purple, 0.2) 0%,
+    rgba($purple, 0.1) 35%,
+    transparent 50%
+  );
+
+  @include respond(tab-land) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 5rem;
+  }
+
+  @include respond(phone) {
+    padding: 0 2rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+
+  .image {
+    img {
+      width: 50rem;
+      height: 32rem;
+    }
+
+    @include respond(phone) {
+      display: none;
+    }
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+    margin: 4rem 3rem;
+    color: $grey;
+
+    @include respond(tab-land) {
+      text-align: center;
+      margin-top: 1rem;
+      margin-bottom: 3rem;
+    }
+
+    @include respond(phone) {
+      margin-top: 3rem;
+    }
+  }
+
+  .title {
+    font-size: 3.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .description {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .cta {
+    font-size: 1.4rem;
+    display: flex;
+
+    a {
+      &:not(:last-child) {
+        margin-right: 2rem;
+
+        @include respond(small-phone) {
+          margin-right: 0;
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+
+    @include respond(tab-land) {
+      justify-content: center;
+    }
+
+    @include respond(small-phone) {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

@@ -23,8 +23,9 @@
   text-decoration: none;
   border-radius: 0.4rem;
   box-shadow: 0 3px 8px rgba($black, 0.2);
+  text-align: center;
 
-  &--primary {
+  &Primary {
     &:link,
     &:visited {
       background-color: $purple;
@@ -39,7 +40,7 @@
     }
   }
 
-  &--secondary {
+  &Secondary {
     &:link,
     &:visited {
       background-color: $white;

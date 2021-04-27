@@ -9,7 +9,7 @@ const ActiveLink = ({ children, activeClassName, href, ...props }) => {
   const childClassName = child.props.className || "";
 
   const className =
-    asPath === props.href || asPath === props.as
+    asPath === href || asPath === props.as
       ? `${childClassName} ${activeClassName}`.trim()
       : childClassName;
 
