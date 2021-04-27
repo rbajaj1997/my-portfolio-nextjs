@@ -1,0 +1,61 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./typography.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15rem;
+  margin-bottom: 15rem;
+
+  @include respond(medium-desktop) {
+    margin: 0;
+    margin-bottom: 15rem;
+  }
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 5rem;
+
+  .text {
+    font-size: 1.8rem;
+    color: $grey;
+    letter-spacing: 1px;
+    line-height: 3rem;
+    text-align: center;
+
+    a {
+      font-weight: bold;
+      text-decoration: none;
+      color: $purple;
+      border-bottom: 1.5px solid $purple;
+      transition: all 0.2s;
+
+      &:hover {
+        color: lighten($purple, 8%);
+        border-bottom: 1.5px solid lighten($purple, 8%);
+      }
+    }
+  }
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .logoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .logo {
+      width: 8rem;
+      height: 8rem;
+      margin: 2rem 2.5rem;
+    }
+  }
+}

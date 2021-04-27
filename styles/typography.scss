@@ -55,17 +55,6 @@
   }
 }
 
-.logo {
-  height: 4rem;
-  width: 16rem;
-  cursor: pointer;
-  transition: all 0.3s;
-
-  &:hover {
-    transform: scale(1.15);
-  }
-}
-
 .headingSecondary {
   font-size: 3rem;
   color: $fadedPurple;
@@ -80,24 +69,4 @@
   padding: 0.5rem 0.8rem;
   font-weight: 400;
   //font-style: oblique;
-}
-
-.typewriter {
-  overflow: hidden;
-  border-right: 0.6rem solid $purple;
-  white-space: nowrap;
-  display: inline-block;
-  animation: blink-caret 1.2s step-end infinite;
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: $purple;
-  }
 }

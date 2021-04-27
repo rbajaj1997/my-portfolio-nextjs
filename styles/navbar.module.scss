@@ -36,3 +36,14 @@
     align-items: center;
   }
 }
+
+.logo {
+  height: 4rem;
+  width: 16rem;
+  cursor: pointer;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}

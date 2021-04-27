@@ -18,9 +18,16 @@ html {
 
 body {
   background-color: #f6f9fc;
-  font-family: "Open Sans", sans-serif;
+  font-family: Verdana, sans-serif;
   padding: 0 15rem;
   border-width: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 @media only screen and (max-width: 75em) {

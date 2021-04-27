@@ -1,0 +1,66 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+@import "./typography.scss";
+
+.container {
+  flex: 1 0 auto;
+  margin-top: 8rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: auto;
+
+  .title {
+    font-size: 6rem;
+    font-weight: 600;
+    color: $purple;
+    padding-bottom: 5rem;
+    font-family: Courier New, monospace;
+
+    @include respond(phone) {
+      font-size: 4.5rem;
+      padding-bottom: 4rem;
+    }
+  }
+
+  .description {
+    font-size: 2.6rem;
+    width: 70%;
+    color: $grey;
+
+    @include respond(small-desktop) {
+      width: 80%;
+    }
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.typewriter {
+  overflow: hidden;
+  border-right: 0.6rem solid $purple;
+  white-space: nowrap;
+  display: inline-block;
+  animation: blink-caret 1.2s step-end infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: $purple;
+  }
+}
